@@ -1,24 +1,22 @@
 <?php
 
 class Connection{
-
-    $host = "localhost";
-    $database = "db_name_here";
-    $user = "your_user_here";
-    $pass = "your_pass_here";
+    const HOST = "localhost";
+    const DATABASE = "database_name";
+    const USER = "username";
+    const PASS = "password";
 
     public static function getInstance(){
-        $conn_str  = "mysql:host=".$this->$host;
-        $conn_str .= ";dbname=".$this->$database;
 
-        $db = new PDO($conn_str, $user, $pass);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $conn_str  = "mysql:host=".self::HOST.";";
+        $conn_str .= "dbname=".self::DATABASE.";";
+        $conn_str .= "charset=utf8";
 
+        $db = new PDO($conn_str, self::USER, self::PASS);
+
+        var_dump($db);
         return $db;
     }
-
-
 }
 
 
