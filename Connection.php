@@ -7,7 +7,7 @@ class Connection{
     $user = "your_user_here";
     $pass = "your_pass_here";
 
-    static function getInstance(){
+    public static function getInstance(){
         $conn_str  = "mysql:host=".$this->$host;
         $conn_str .= ";dbname=".$this->$database;
 
