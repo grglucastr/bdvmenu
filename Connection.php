@@ -13,8 +13,6 @@ class Connection{
         $conn_str .= "charset=utf8";
 
         $db = new PDO($conn_str, self::USER, self::PASS);
-
-        var_dump($db);
         return $db;
     }
 }
