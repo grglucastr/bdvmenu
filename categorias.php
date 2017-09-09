@@ -6,7 +6,7 @@
 </p>
 
 <ul>
-    <li><a href="categorias_nova.php">Inserir Nova</a></li>
+    <li><a href="categorias_form.php">Inserir Nova</a></li>
 </ul>
 
 <h6>Lista de Categorias</h6>
@@ -35,7 +35,7 @@ $categorias = $stmt->fetchAll(PDO::FETCH_OBJ);
         <tr>
             <td> <?=$categoria->nome ?> </td>
             <td> <?=$categoria->descricao ?> </td>
-            <td> <a href="#">Editar</a> </td>
+            <td> <a href="categorias_form.php?id=<?=$categoria->id?>">Editar</a> </td>
             <td> <a href="#">Remover</a> </td>
         </tr>
         <?php endforeach; ?>
