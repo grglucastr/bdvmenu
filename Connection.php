@@ -2,9 +2,9 @@
 
 class Connection{
     const HOST = "localhost";
-    const DATABASE = "database_name";
-    const USER = "username";
-    const PASS = "password";
+    const DATABASE = "bdvmenu";
+    const USER = "root";
+    const PASS = "senha123";
 
     public static function getInstance(){
 
